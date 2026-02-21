@@ -9,7 +9,7 @@ Team INSPIRE Organization:[ *(Link)*](https://github.com/orgs/Team-INSPIRE2226/r
 
 LOGICK is a log-level security monitoring tool designed to detect Log4Shell and related Log4j exploit attempts directly from application logs. Instead of relying on network-level monitoring, LOGICK works where the attack actually appears — inside logs — allowing early detection of malicious payloads before serious damage occurs.
 
-LOGICK provides a lightweight SDK that integrates with Java applications using Log4j. The SDK automatically captures logs, securely sends them to the LOGICK backend, and analyzes them using a regex-based detection engine to classify logs as safe, suspicious, or malicious. The results are displayed in a centralized dashboard for real-time monitoring and investigation.
+LOGICK provides a lightweight SDK that integrates with Java applications using Log4j. The SDK automatically captures logs, securely sends them to the LOGICK backend, and analyzes them using a regex-based detection engine to classify logs as safe, suspicious, or malicious. The results are displayed in a centralized dashboard for real-time monitoring and investigation. The malicious IPs are blocked and is also displayed on the dashboard.
 
 This project demonstrates how legacy Java applications can be protected using log-level monitoring without modifying existing business logic.
 
@@ -42,6 +42,7 @@ A controlled vulnerable application used to simulate Log4Shell attacks and valid
 4. The detection engine analyzes logs using exploit signatures.
 5. Logs are classified as **safe**, **suspicious**, or **malicious**.
 6. Results are displayed in the LOGICK dashboard.
+7. Malicious IPs are blocked and dsplayed on the dashboard
 
 ---
 
@@ -94,8 +95,14 @@ The LOGICK dashboard provides:
 - Attack detection visibility
 - Malicious log identification
 - Security analysis metrics
+- Throttled IP details
 
-> Screenshots: *(Add dashboard screenshots here)*
+<p align="center">
+  <img src="readme_img/img2.png" alt="Demo" width="700" />
+</p>
+<p align="center">
+  <img src="readme_img/img3.png" alt="Demo" width="700" />
+</p>
 
 ---
 
